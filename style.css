@@ -1,0 +1,643 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: url(../img/hypnotize.png);
+	box-sizing: border-box;
+}
+
+.menu {
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(90deg, #9eac32, #c8f611);
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	z-index: 2;
+	border: 1px solid rgba(0,0,0,.1)
+}
+
+.menu span {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: black;
+	top: Calc(50% - 1px);
+	left: Calc(50% - 15px);
+}
+
+.menu span:nth-child(1) {
+	transform: translateY(-10px);
+}
+
+.menu span:nth-child(3) {
+	transform: translateY(10px);
+}
+
+.menu.active span:nth-child(1) {
+	transform: translateY(0) rotate(45deg);
+}
+
+.menu.active span:nth-child(3) {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.menu.active span:nth-child(2) {
+	transform: translateX(-30);
+	opacity: 0;
+}
+
+.menu-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: linear-gradient(90deg, #9eac32, #c8f611);;
+	width: 100%;
+	height: 60px;
+	transition: 0.5s;
+	z-index: 1;
+	transform: translateX(-100%);
+}
+
+.menu-bar.active {
+	transform: translateX(0);
+}
+
+.menu-bar ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.menu-bar ul li {
+	list-style: none;
+}
+.menu-bar ul li input {
+	line-height: 28px;
+	border: 1px solid #9eac32;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+.menu-bar ul li a {
+	display: block;
+	line-height: 60px;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: #262626;
+	padding: 0 20px;
+	/*border-right: 1px solid rgba(0,0,0,.1)*/
+}
+
+.menu-bar ul li a:hover {
+	background: lightgreen;
+	color: white;
+	height: 60px;
+	overflow: hidden;
+}
+
+@media (max-width: 975px) {
+	.menu-bar {
+		height: auto;
+	}
+
+	.menu-bar ul {
+		display: inherit;
+		float: none;
+		text-align: center;
+		width: 100%;
+		height: 100vh;
+	}
+
+	.menu-bar ul li a {
+		border-right: none;
+		margin: auto;
+	}
+
+	.kotak {
+		display: flex;
+		min-height: 20vh;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.content {
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu1, .menu2, .menu3, .menu4 {
+		justify-content: space-around;
+	}
+	
+	.alamat {
+		flex-direction: column;
+	}
+
+	.detail ul li:first-child img{
+		width: 200px;
+	}
+	.detail ul li {
+		max-width: 500px;
+		margin: 0 0;
+	}
+
+	.lead-banner {
+		position: relative;
+	}
+	.sosmed {
+		flex-wrap: wrap;
+	}
+
+	.sosmed a img {
+		width: 30px;
+		height: 30px;
+	}
+
+}
+
+.icon {
+	width: 30px;
+	height: 25px;
+	margin-top: 15px;
+}
+
+.lead-banner {
+	position: relative;
+}
+
+.lead-banner img {
+	width: 100%;
+	max-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sosmed {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+}
+
+.sosmed a img {
+	width: 50px;
+	height: 50px;
+	line-height: 60px;
+	overflow: hidden;
+}
+
+h1, h2{
+	text-align: center;
+	font-family: pristina;
+}
+
+.kotak {
+	width: 100%;
+	margin: 20px auto;
+	max-height: 55vh;
+	justify-content: center;
+	display: flex;
+}
+
+.kolom1, .kolom2, .kolom3 {
+	/*position: relative;*/
+	text-align: center;
+}
+
+.kotak ul li img {
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+}
+.kotak ul li a {
+	/*position: absolute;*/
+	/*top: 120px;*/
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: pristina;
+	font-weight: 500;
+}
+
+.kotak ul li {
+	list-style: none;
+}
+
+
+.content {
+	width: 100%;
+	/*margin-left: 50px;*/
+	display: flex;
+	align-items: center;
+	/*justify-content: space-around;*/
+	flex-direction: column;
+}
+
+.menu1, .menu2, .menu3, .menu4 {
+	/*flex-basis: 15%;*/
+	position: relative;
+	/*align-items: center;*/
+	height: 250px;
+	width: 250px; /*220*/
+	background: linear-gradient(45deg, #9eac32, #c8f611);
+	margin: 20px 20px;
+}
+
+.menu1 ul li, .menu2 ul li, .menu3 ul li, .menu4 ul li {
+	list-style: none;
+}
+
+.menu1 ul li label {
+	position: absolute;
+	top: 85%;
+}
+
+.menu1 img, .menu2 img, .menu3 img, .menu4 img {
+	position: relative;
+	width: 100%;
+	height: 205px;
+}
+
+.menu1 ul li a, .menu2 ul li a, .menu3 ul li a, .menu4 ul li a {
+	position: absolute;
+	text-decoration: none;
+	color: black;
+	font-size: 1.5em;
+	font-family: pristina;
+	top: 60%;
+	background: linear-gradient(60deg, #fff, #11d8f6);
+	border-radius: 5px;
+}
+
+footer {
+	width: 100%;
+	height: 40px;
+	background: linear-gradient(90deg, #9eac32, #c8f611);
+}
+
+footer div {
+	margin: auto;
+	line-height: 40px;
+	text-align: center;
+}
+
+
+/*Detail CSS
+*/
+.link {
+	display: block;
+	background: linear-gradient(45deg, #f6a811, #c8f611);
+	width: 80%;
+	height: 25px;
+	font-size: 12px;
+	font-family: arial;
+	text-align: center;
+	margin: auto;
+	line-height: 25px;
+	box-shadow: 1px 1px 10px -2px;
+}
+.container {
+	width: 70%;
+	min-height: 100vh;
+	margin: 20px 9%;
+}
+.detail {
+	width: 330px;
+}
+
+.detail p {
+	width: 250px;
+}
+
+.detail ul li {
+	list-style: none;
+	/*margin: auto;*/
+}
+
+.detail ul li:first-child img {
+	width: 290px;
+	height: 300px;
+}
+
+.detail ul li span {
+	display: inline-block;
+	font-size: 12px;
+	color: #333;
+}
+
+.detail ul li tr td {
+	width: 100px;
+}
+button {
+	background: linear-gradient(-45deg, #9eac32, #c8f611);
+	cursor: pointer;
+	border: none;
+	height: 35px;
+	margin-left: 15px;
+	font-family: tahoma;
+	font-size: 12px;
+	box-shadow: 0px 1px 10px -2px;
+	border-radius: 10px;
+}
+
+span a {
+	text-decoration: none;
+	color: black;
+}
+
+.next a {
+	margin: Calc(50% - 10px);
+	margin-top: 10px;
+	text-decoration: none;
+	color: #9eac32;
+}
+
+.pesan {
+	width: 200px;
+	height: 300px;
+	background: pink;
+	position: relative;
+}
+
+.pesan h6 {
+	background: #9eac32;
+	padding: 3px;
+}
+
+.pesan p {
+	font-size: 12px;
+	background: white;
+	width: 150px;
+	border-radius: 5px;
+	margin-left: 3px;
+}
+
+.pesan input {
+	position: absolute;
+	width: 160px;
+	bottom: 0;
+}
+
+.pesan span a {
+	position: absolute;
+	right: 0;
+	background: #9eac32;
+	font-weight: 500;
+	color: black;
+	padding: 3px 5px;
+	bottom: 0;
+}
+/*payment*/
+
+.box-alamat, .pesanan, .payment, .bayar {
+	margin: -3px 60px 40px;	
+}
+
+.logo {
+	
+	height: 50px;
+	background: #ddd9d9;
+}
+
+.logo span {
+	color: #1ab028;
+}
+
+.alamat {
+	display: flex;
+	background: linear-gradient(45deg, #29bd7c, #29aabd);
+	box-shadow: 0px 30px 27px -20px rgba(0,0,0,.3);	
+
+}
+
+.alamat:hover {
+	transform: translateY(-10px);
+}
+
+
+.alamat ul {
+	flex: 1;
+}
+
+.alamat p {
+	flex: 3;
+	color: #262626;
+	margin: auto;
+}
+
+.alamat p span {
+	color: #454644;
+	margin-left: 5px;
+}
+.alamat a {
+	flex: 1;
+	text-decoration: none;
+	color: #262626;
+	margin-top: 30px;
+}
+
+.alamat ul li {
+	list-style: none;
+}
+
+.alamat ul li:nth-child(1) {
+	color: white;
+	font-weight: 900;
+}
+
+.alamat ul li:nth-child(2) {
+	font-weight: 700;
+}
+
+.pesanan, .bayar  {
+	background: linear-gradient(45deg, #29bd7c, #29aabd);
+	box-shadow: 0px 30px 27px -20px rgba(0,0,0,.4);
+	box-sizing: border-box;
+	width: 300px;
+	padding: 10px 0px 5px;
+	margin: 0 60px 10px;
+}
+
+.pesanan tr td {
+	padding: 5px 15px 5px 0;
+}
+
+.pesanan tr td img {
+	width: 50px;
+	height: 40px;
+}
+
+.payment tr {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.payment tr td:first-child {
+	font-weight: 700;
+	margin-right: 20px;
+}
+
+.bayar button {
+	margin-top: 15px;
+	box-shadow: 0px 30px 27px -20px rgba(0,0,0,.4);
+}
+@media (min-width: 768px ){
+	.bayar {
+		margin: auto;
+	}
+}
+
+/*login*/
+
+.loginBox, .registrasiBox {
+	width: 400px;
+	height: 250px;
+	margin: auto;
+	text-align: center;
+	padding: 2px;
+	position: relative;
+	border: 1px solid #9eac32;
+	margin-top: 60px;
+	box-shadow: 1px 1px 10px -3px;
+}
+
+.loginBox h3, .registrasiBox h3 {
+	text-align: center;
+}
+
+.loginBox label, .registrasiBox label {
+	display: inline-block;
+	padding: 7px;
+	text-align: center;
+	width: 20%;
+	font-family: pristina;
+	font-weight: 900;
+	font-size: 18px;
+}
+
+.registrasiBox button {
+	position: absolute;
+	right: 40%;
+	top: 80%;
+	z-index: 0;
+	padding: 10px;
+}
+
+.loginBox button {
+	position: absolute;
+	right: 40%;
+	top: 55%;
+	z-index: 0;
+	padding: 10px;
+}
+
+.loginBox input, .registrasiBox input {
+	margin-right: 40px;
+}
+
+.loginBox p {
+	position: relative;
+	top: 16%;
+	text-align: center;
+	font-family: pristina;
+	font-size: 20px;
+	
+}
+
+.loginBox a {
+	text-decoration: none;
+	font-weight: 900;
+	color: #29bd7c;
+}
+
+.tambah {
+	width: 50px;
+	position: relative;
+}
+
+.tambah a {
+	font-size: 12px; 
+	text-decoration: none; 
+	color: black;
+}
+
+.tambah a img {
+	width: 50px;
+	height: 50px;
+	margin-left: 50%;
+}
+
+.tambah a p {
+	position: absolute;
+	top: 40px;
+	left: 47%;
+}
+
+.profil {
+	width: 60%;
+	margin: auto;
+}
+
+.profil label {
+	margin-left: 100px;
+	font-family: arial;
+	font-size: 15px;
+}
+
+.profil span {
+	display: inline-block;
+	width: 50%;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 100px;
+}
+/*.container {
+	position: relative;
+	width: 100%;
+	max-height: 1200px;
+	margin: 50px auto;
+}
+
+.kotak1 img {
+	position: absolute;
+	left: Calc(50% - 40%);
+	
+}
+
+.kotak1 h3 {
+	position: absolute;
+	left: 23%;
+	background: rgba(255,255,255,.5);
+}
+
+.kotak1 h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+.kotak2 img {
+	position: absolute;
+	right: Calc(50% - 40%);
+}
+
+.kotak2 h3 {
+	position: absolute;
+	right: 20%;
+	background: rgba(255,255,255,.5);
+}
+
+.kotak2 h3 a {
+	text-decoration: none;
+	color: black;
+}*/
+
